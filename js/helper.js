@@ -1,16 +1,20 @@
 /*
 
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
+This file contains all of the code running in the background that makes
+resumeBuilder.js possible. We call these helper functions because they
+support your code in this course.
 
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
+Don't worry, you'll learn what's going on in this file throughout the
+course. You won't need to make any changes to it until you start
+experimenting with inserting a Google Map in Problem Set 3.
 
 Cameron Pittman
 */
 
 
 /*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
+These are HTML strings. As part of the course, you'll be using JavaScript
+functions replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr/>';
@@ -60,7 +64,9 @@ var googleMap = '<div id="map"></div>';
 
 
 /*
-The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
+The International Name challenge in Lesson 2 where you'll create a
+function that will need this helper code to run. Don't delete! It
+hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
   $('button').click(function() {
@@ -70,7 +76,8 @@ $(document).ready(function() {
 });
 
 /*
-The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
+The next few lines about clicks are for the Collecting Click
+Locations quiz in Lesson 2.
 */
 clickLocations = [];
 
@@ -91,7 +98,8 @@ $(document).click(function(loc) {
 
 
 /*
-This is the fun part. Here's where we generate the custom Google Map for the website.
+This is the fun part. Here's where we generate the custom Google Map
+for the website.
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
