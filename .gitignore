@@ -1,2 +1,5 @@
 # Aptana project file
 .project
+
+# Webstorm project folder
+.idea
