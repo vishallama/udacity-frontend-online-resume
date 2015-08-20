@@ -107,3 +107,26 @@ var education = {
     }
 };
 
+/* JSON object containing work info */
+var work = {
+    // Array of objects containing previous jobs info
+    jobs: [
+        {
+            employer: "Arabic and Indian Foods LLC",
+            title: "Co-owner",
+            location: "Cedar City, UT",
+            dates: "2012 - 2015",
+            description: "Ran and managed a grocery store."
+        },
+        {
+            employer: "Cedar City Yogurt LLC",
+            title: "Co-owner",
+            location: "Cedar City, UT",
+            dates: "2014 - 2015",
+            description: "Ran and managed a family-owned frozen yogurt store."
+        }
+    ],
+    display: function(){
+    }
+};
+
