@@ -3,3 +3,16 @@
 
 # Webstorm project folder
 .idea
+
+# Temporary image folder
+images_src
+
+# Gruntfile
+Gruntfile.js
+
+# JSON package file
+package.json
+
+# Temporary swap files
+*.swp
+
