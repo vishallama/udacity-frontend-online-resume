@@ -36,6 +36,10 @@ var bio = {
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
+        // Bio pic and Welcome Message
+        var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+        var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
         // Array of contact items that go in the header and footer
         var contactItems = [
             formattedMobile,
@@ -51,6 +55,9 @@ var bio = {
         // Add contact items in the header and footer
         $("#topContacts").prepend(contactItems);
         $("#footerContacts").prepend(contactItems);
+
+        // Add bio pic and welcome message after topContacts list in header
+        $("#header").append(formattedBioPic, formattedWelcomeMessage);
     }
 };
 
