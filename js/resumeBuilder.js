@@ -140,7 +140,8 @@ var projects = {
             dates: "2015",
             description: "One-page fully-responsive website to display a portfolio of " +
             "projects. Written using HTML, CSS, jQuery, and Bootstrap.",
-            images: []
+            images: ["images/udacity-frontend-portfolio-img01-600x300small.png",
+                     "udacity-frontend-portfolio-img02-600x300small.png"]
         },
         {
             title: "Udacity Front-End Web Developer Nanodegree - Online Resume",
@@ -154,7 +155,8 @@ var projects = {
             dates: "2015",
             description: "One-page responsive website for displaying movie trailers. " +
             "Written using HTML, CSS, jQuery, and Bootstrap.",
-            images: []
+            images: ["udacity-fullstack-movie-trailer-img01-600x300small.png",
+                     "udacity-fullstack-movie-trailer-img04-600x300small.png"]
         }
     ],
     display: function(){
