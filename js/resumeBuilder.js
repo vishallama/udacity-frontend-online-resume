@@ -25,6 +25,32 @@ var bio = {
     skills: ["Python", "JavaScript", "HTML/CSS", "Bootstrap", "Linux"],
     biopic: "images/vishal.png",
     display: function() {
+        // Name and Role
+        var formattedName = HTMLheaderName.replace("%data%", bio.name);
+        var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+
+        // Contact items
+        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+        var formattedEmail= HTMLemail.replace("%data%", bio.contacts.email);
+        var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
+        var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+        var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+
+        // Array of contact items that go in the header and footer
+        var contactItems = [
+            formattedMobile,
+            formattedEmail,
+            formattedTwitter,
+            formattedGithub,
+            formattedLocation
+        ];
+
+        // Add name and role in the header
+        $("#header").prepend(formattedName, formattedRole);
+
+        // Add contact items in the header and footer
+        $("#topContacts").prepend(contactItems);
+        $("#footerContacts").prepend(contactItems);
     }
 };
 
@@ -167,3 +193,10 @@ var projects = {
     display: function(){
     }
 };
+
+/*
+Execute display() from each object to render index.html correctly
+ */
+
+/* Bio */
+bio.display();
