@@ -33,22 +33,18 @@ var bio = {
     ],
     "biopic": "images/vishal.png",
     "display": function() {
-        // Name and Role
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-        // Contact items
         var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
         var formattedEmail= HTMLemail.replace("%data%", bio.contacts.email);
         var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
         var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
         var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-        // Bio pic and Welcome Message
         var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
         var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-        // Array of contact items that go in the header and footer
         var contactItems = [
             formattedMobile,
             formattedEmail,
@@ -57,20 +53,15 @@ var bio = {
             formattedLocation
         ];
 
-        // Add name and role at the top in the header
         $("#header").prepend(formattedName, formattedRole);
 
-        // Add contact items in the header and footer
         $("#topContacts").prepend(contactItems);
         $("#footerContacts").prepend(contactItems);
 
-        // Add bio pic and welcome message after topContacts in header
         $("#header").append(formattedBioPic, formattedWelcomeMessage);
 
-        // Add skills heading after the welcome message
         $("#header").append(HTMLskillsStart);
 
-        // Loop through skills array and insert each element into skills list
         bio.skills.forEach(function (skill) {
             var formattedSkill = HTMLskills.replace("%data%", skill);
             $("#skills").append(formattedSkill);
@@ -80,7 +71,6 @@ var bio = {
 
 /* JSON object containing work info */
 var work = {
-    // Array of objects containing info on previous jobs
     "jobs": [
         {
             "employer": "Cedar City Yogurt LLC",
@@ -108,9 +98,7 @@ var work = {
         }
     ],
     "display": function(){
-        // Loop through jobs array and add each item after work heading
         work.jobs.forEach(function(workEntry) {
-            // Create formatted items for each job
             var formattedWorkEmployer = HTMLworkEmployer.
                 replace("%data%", workEntry.employer);
             var formattedWorkTitle = HTMLworkTitle.
@@ -122,7 +110,6 @@ var work = {
             var formattedWorkDescription = HTMLworkDescription.
                 replace("%data%", workEntry.description);
 
-            // Append all the items for each job
             $("#workExperience").
                 append(
                 HTMLworkStart,
@@ -138,7 +125,6 @@ var work = {
 
 /* JSON object containing info on projects */
 var projects = {
-    // Array of objects containing info on projects worked
     "projects": [
         {
             "title": "Udacity Front-End Web Developer Nanodegree - Portfolio Site",
@@ -172,9 +158,7 @@ var projects = {
         }
     ],
     "display": function(){
-        // Loop through projects and add each item
         projects.projects.forEach(function(project) {
-            // Create formatted HTML strings for each project
             var formattedProjectTitle = HTMLprojectTitle.
                 replace("%data%", project.title);
             var formattedProjectDates = HTMLprojectDates.
@@ -182,7 +166,6 @@ var projects = {
             var formattedProjectDescription = HTMLprojectDescription.
                 replace("%data%", project.description);
 
-            // Add the formatted strings after projects header
             $("#projects").append(
                 HTMLprojectStart,
                 formattedProjectTitle,
@@ -190,7 +173,6 @@ var projects = {
                 formattedProjectDescription
             );
 
-            // Now add project image urls
             project.images.forEach(function (imageUrl) {
                 var formattedProjectImage = HTMLprojectImage.
                     replace("%data%", imageUrl);
@@ -203,7 +185,6 @@ var projects = {
 
 /* JSON object containing education info */
 var education = {
-    // An array of objects containing info on education degrees
     "schools": [
         {
             "name": "Southern Utah University",
@@ -214,7 +195,6 @@ var education = {
             "url": ""
         }
     ],
-    // Array of objects containing info on online courses
     "onlineCourses": [
         {
             "title": "Intro to HTML and CSS",
