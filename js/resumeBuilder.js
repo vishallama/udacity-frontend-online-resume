@@ -147,7 +147,7 @@ var projects = {
             "projects. Written using HTML, CSS, jQuery, and Bootstrap.",
             images: [
                 "images/udacity-frontend-portfolio-img01-600x300small.png",
-                "udacity-frontend-portfolio-img02-600x300small.png"
+                "images/udacity-frontend-portfolio-img02-600x300small.png"
             ]
         },
         {
@@ -156,6 +156,8 @@ var projects = {
             description: "One-page responsive website for displaying an interactive " +
             "online resume. Written using HTML, CSS, JavaScript, and jQuery.",
             images: [
+                "images/",
+                "images/"
             ]
         },
         {
@@ -164,12 +166,38 @@ var projects = {
             description: "One-page responsive website for displaying movie trailers. " +
             "Written using HTML, CSS, jQuery, and Bootstrap.",
             images: [
-                "udacity-fullstack-movie-trailer-img01-600x300small.png",
-                "udacity-fullstack-movie-trailer-img04-600x300small.png"
+                "images/udacity-fullstack-movie-trailer-img01-600x300small.png",
+                "images/udacity-fullstack-movie-trailer-img04-600x300small.png"
             ]
         }
     ],
     display: function(){
+        // Loop through projects and add each item
+        projects.projects.forEach(function(project) {
+            // Create formatted HTML strings for each project
+            var formattedProjectTitle = HTMLprojectTitle.
+                replace("%data%", project.title);
+            var formattedProjectDates = HTMLprojectDates.
+                replace("%data%", project.dates);
+            var formattedProjectDescription = HTMLprojectDescription.
+                replace("%data%", project.description);
+
+            // Add the formatted strings after projects header
+            $("#projects").append(
+                HTMLprojectStart,
+                formattedProjectTitle,
+                formattedProjectDates,
+                formattedProjectDescription
+            );
+
+            // Now add project image urls
+            project.images.forEach(function (imageUrl) {
+                var formattedProjectImage = HTMLprojectImage.
+                    replace("%data%", imageUrl);
+                $("#projects").append(formattedProjectImage);
+            });
+
+        });
     }
 };
 
@@ -263,4 +291,7 @@ bio.display();
 
 /* Work */
 work.display();
+
+/* Projects */
+projects.display();
 
