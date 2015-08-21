@@ -78,6 +78,101 @@ var bio = {
     }
 };
 
+/* JSON object containing work info */
+var work = {
+    // Array of objects containing info on previous jobs
+    jobs: [
+        {
+            employer: "Cedar City Yogurt LLC",
+            title: "Co-owner",
+            location: "Cedar City, UT",
+            dates: "2014 - 2015",
+            description: "Ran and managed a family-owned frozen yogurt store."
+        },
+        {
+            employer: "Arabic and Indian Foods LLC",
+            title: "Co-owner",
+            location: "Cedar City, UT",
+            dates: "2012 - 2015",
+            description: "Ran and managed a grocery store."
+        },
+        {
+            employer: "Southern Utah University",
+            title: "Tutor, Grader and TA",
+            location: "Cedar City, UT",
+            dates: "2006- 2011",
+            description: "Tutored, graded HW and performed TA-related tasks " +
+            "for a variety of math and computer science courses, including " +
+            "calculus, probability and statistics, linear algebra, college " +
+            "algebra, introductory logic, and introductory java programming."
+        }
+    ],
+    display: function(){
+        // Loop through jobs array and add each item after work heading
+        work.jobs.forEach(function(workEntry) {
+            // Create formatted items for each job
+            var formattedWorkEmployer = HTMLworkEmployer.
+                replace("%data%", workEntry.employer);
+            var formattedWorkTitle = HTMLworkTitle.
+                replace("%data%", workEntry.title);
+            var formattedWorkLocation = HTMLworkLocation.
+                replace("%data%", workEntry.location);
+            var formattedWorkDates = HTMLworkDates.
+                replace("%data%", workEntry.dates);
+            var formattedWorkDescription = HTMLworkDescription.
+                replace("%data%", workEntry.description);
+
+            // Append all the items for each job
+            $("#workExperience").
+                append(
+                HTMLworkStart,
+                formattedWorkEmployer,
+                formattedWorkTitle,
+                formattedWorkLocation,
+                formattedWorkDates,
+                formattedWorkDescription
+            );
+        });
+    }
+};
+
+/* JSON object containing info on projects */
+var projects = {
+    // Array of objects containing info on projects worked
+    projects: [
+        {
+            title: "Udacity Front-End Web Developer Nanodegree - Portfolio Site",
+            dates: "2015",
+            description: "One-page fully-responsive website to display a portfolio of " +
+            "projects. Written using HTML, CSS, jQuery, and Bootstrap.",
+            images: [
+                "images/udacity-frontend-portfolio-img01-600x300small.png",
+                "udacity-frontend-portfolio-img02-600x300small.png"
+            ]
+        },
+        {
+            title: "Udacity Front-End Web Developer Nanodegree - Online Resume",
+            dates: "2015",
+            description: "One-page responsive website for displaying an interactive " +
+            "online resume. Written using HTML, CSS, JavaScript, and jQuery.",
+            images: [
+            ]
+        },
+        {
+            title: "Udacity Full Stack Web Developer Nanodegree - Movie Trailer Website",
+            dates: "2015",
+            description: "One-page responsive website for displaying movie trailers. " +
+            "Written using HTML, CSS, jQuery, and Bootstrap.",
+            images: [
+                "udacity-fullstack-movie-trailer-img01-600x300small.png",
+                "udacity-fullstack-movie-trailer-img04-600x300small.png"
+            ]
+        }
+    ],
+    display: function(){
+    }
+};
+
 /* JSON object containing education info */
 var education = {
     // An array of objects containing info on education degrees
@@ -158,75 +253,6 @@ var education = {
     }
 };
 
-/* JSON object containing work info */
-var work = {
-    // Array of objects containing previous jobs info
-    jobs: [
-        {
-            employer: "Cedar City Yogurt LLC",
-            title: "Co-owner",
-            location: "Cedar City, UT",
-            dates: "2014 - 2015",
-            description: "Ran and managed a family-owned frozen yogurt store."
-        },
-        {
-            employer: "Arabic and Indian Foods LLC",
-            title: "Co-owner",
-            location: "Cedar City, UT",
-            dates: "2012 - 2015",
-            description: "Ran and managed a grocery store."
-        },
-        {
-            employer: "Southern Utah University",
-            title: "Tutor, Grader and TA",
-            location: "Cedar City, UT",
-            dates: "2006- 2011",
-            description: "Tutored, graded HW and performed TA-related tasks " +
-            "for a variety of math and computer science courses, including " +
-            "calculus, probability and statistics, linear algebra, college " +
-            "algebra, introductory logic, and introductory java programming."
-        }
-    ],
-    display: function(){
-    }
-};
-
-/* JSON object containing info on projects */
-var projects = {
-    // Array of objects containing info on projects worked
-    projects: [
-        {
-            title: "Udacity Front-End Web Developer Nanodegree - Portfolio Site",
-            dates: "2015",
-            description: "One-page fully-responsive website to display a portfolio of " +
-            "projects. Written using HTML, CSS, jQuery, and Bootstrap.",
-            images: [
-                "images/udacity-frontend-portfolio-img01-600x300small.png",
-                "udacity-frontend-portfolio-img02-600x300small.png"
-            ]
-        },
-        {
-            title: "Udacity Front-End Web Developer Nanodegree - Online Resume",
-            dates: "2015",
-            description: "One-page responsive website for displaying an interactive " +
-            "online resume. Written using HTML, CSS, JavaScript, and jQuery.",
-            images: [
-            ]
-        },
-        {
-            title: "Udacity Full Stack Web Developer Nanodegree - Movie Trailer Website",
-            dates: "2015",
-            description: "One-page responsive website for displaying movie trailers. " +
-            "Written using HTML, CSS, jQuery, and Bootstrap.",
-            images: [
-                "udacity-fullstack-movie-trailer-img01-600x300small.png",
-                "udacity-fullstack-movie-trailer-img04-600x300small.png"
-            ]
-        }
-    ],
-    display: function(){
-    }
-};
 
 /*
 Execute display() from each object to render index.html correctly
@@ -234,3 +260,7 @@ Execute display() from each object to render index.html correctly
 
 /* Bio */
 bio.display();
+
+/* Work */
+work.display();
+
