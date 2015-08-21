@@ -12,17 +12,17 @@ correctly.
 
 /* JSON object containing biographical info */
 var bio = {
-    name: "Vishal Lama",
-    role: "Web Developer",
-    contacts: {
-        mobile: "123-456-7890",
-        email: "contact@vishallama.org",
-        github: "vishallama",
-        twitter: "@vishallama",
-        location: "Cedar City, UT"
+    "name": "Vishal Lama",
+    "role": "Web Developer",
+    "contacts": {
+        "mobile": "123-456-7890",
+        "email": "contact@vishallama.org",
+        "github": "vishallama",
+        "twitter": "@vishallama",
+        "location": "Cedar City, UT"
     },
-    welcomeMessage: "Welcome!",
-    skills: [
+    "welcomeMessage": "Welcome!",
+    "skills": [
         "Python",
         "JavaScript",
         "SML(NJ)",
@@ -31,8 +31,8 @@ var bio = {
         "Bootstrap",
         "Linux"
     ],
-    biopic: "images/vishal.png",
-    display: function() {
+    "biopic": "images/vishal.png",
+    "display": function() {
         // Name and Role
         var formattedName = HTMLheaderName.replace("%data%", bio.name);
         var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
