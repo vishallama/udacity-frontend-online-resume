@@ -16,3 +16,6 @@ package.json
 # Temporary swap files
 *.swp
 
+# Node modules
+node_modules
+
