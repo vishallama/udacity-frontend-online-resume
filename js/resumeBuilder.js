@@ -22,7 +22,15 @@ var bio = {
         location: "Cedar City, UT"
     },
     welcomeMessage: "Welcome!",
-    skills: ["Python", "JavaScript", "HTML/CSS", "Bootstrap", "Linux"],
+    skills: [
+        "Python",
+        "JavaScript",
+        "SML(NJ)",
+        "Scala",
+        "HTML/CSS",
+        "Bootstrap",
+        "Linux"
+    ],
     biopic: "images/vishal.png",
     display: function() {
         // Name and Role
@@ -49,15 +57,24 @@ var bio = {
             formattedLocation
         ];
 
-        // Add name and role in the header
+        // Add name and role at the top in the header
         $("#header").prepend(formattedName, formattedRole);
 
         // Add contact items in the header and footer
         $("#topContacts").prepend(contactItems);
         $("#footerContacts").prepend(contactItems);
 
-        // Add bio pic and welcome message after topContacts list in header
+        // Add bio pic and welcome message after topContacts in header
         $("#header").append(formattedBioPic, formattedWelcomeMessage);
+
+        // Add skills heading after the welcome message
+        $("#header").append(HTMLskillsStart);
+
+        // Loop through skills array and insert each element into skills list
+        bio.skills.forEach(function (skill) {
+            var formattedSkill = HTMLskills.replace("%data%", skill);
+            $("#skills").append(formattedSkill);
+        });
     }
 };
 
