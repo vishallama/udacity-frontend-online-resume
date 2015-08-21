@@ -9,6 +9,7 @@ correctly.
 
  */
 
+
 /* JSON object containing biographical info */
 var bio = {
     name: "Vishal Lama",
@@ -130,3 +131,32 @@ var work = {
     }
 };
 
+/* JSON object containing info on projects */
+var projects = {
+    // Array of objects containing info on projects worked
+    projects: [
+        {
+            title: "Udacity Front-End Web Developer Nanodegree - Portfolio Site",
+            dates: "2015",
+            description: "One-page fully-responsive website to display a portfolio of " +
+            "projects. Written using HTML, CSS, jQuery, and Bootstrap.",
+            images: []
+        },
+        {
+            title: "Udacity Front-End Web Developer Nanodegree - Online Resume",
+            dates: "2015",
+            description: "One-page responsive website for displaying an interactive " +
+            "online resume. Written using HTML, CSS, JavaScript, and jQuery.",
+            images: []
+        },
+        {
+            title: "Udacity Full Stack Web Developer Nanodegree - Movie Trailer Website",
+            dates: "2015",
+            description: "One-page responsive website for displaying movie trailers. " +
+            "Written using HTML, CSS, jQuery, and Bootstrap.",
+            images: []
+        }
+    ],
+    display: function(){
+    }
+};
