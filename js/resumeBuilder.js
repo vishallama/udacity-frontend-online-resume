@@ -110,9 +110,9 @@ var work = {
             var formattedWorkDescription = HTMLworkDescription.
                 replace("%data%", workEntry.description);
 
-            $("#workExperience").
+            $("#workExperience").append(HTMLworkStart);
+            $(".work-entry:last").
                 append(
-                HTMLworkStart,
                 formattedWorkEmployer,
                 formattedWorkTitle,
                 formattedWorkLocation,
@@ -132,8 +132,8 @@ var projects = {
             "description": "One-page fully-responsive website to display a portfolio of " +
             "projects. Written using HTML, CSS, jQuery, and Bootstrap.",
             "images": [
-                "images/udacity-frontend-portfolio-img01-600x300small.png",
-                "images/udacity-frontend-portfolio-img02-600x300small.png"
+                "images/udacity-frontend-portfolio-img01-300x150xs.png",
+                "images/udacity-frontend-portfolio-img02-300x150xs.png"
             ]
         },
         {
@@ -142,8 +142,8 @@ var projects = {
             "description": "One-page responsive website for displaying an interactive " +
             "online resume. Written using HTML, CSS, JavaScript, and jQuery.",
             "images": [
-                "images/udacity-fullstack-movie-trailer-img02-600x300small.png",
-                "images/udacity-fullstack-movie-trailer-img03-600x300small.png"
+                "images/udacity-fullstack-movie-trailer-img02-300x150xs.png",
+                "images/udacity-fullstack-movie-trailer-img03-300x150xs.png"
             ]
         },
         {
@@ -152,8 +152,8 @@ var projects = {
             "description": "One-page responsive website for displaying movie trailers. " +
             "Written using HTML, CSS, jQuery, and Bootstrap.",
             "images": [
-                "images/udacity-fullstack-movie-trailer-img01-600x300small.png",
-                "images/udacity-fullstack-movie-trailer-img04-600x300small.png"
+                "images/udacity-fullstack-movie-trailer-img01-300x150xs.png",
+                "images/udacity-fullstack-movie-trailer-img04-300x150xs.png"
             ]
         }
     ],
@@ -166,8 +166,8 @@ var projects = {
             var formattedProjectDescription = HTMLprojectDescription.
                 replace("%data%", project.description);
 
-            $("#projects").append(
-                HTMLprojectStart,
+            $("#projects").append(HTMLprojectStart);
+            $(".project-entry:last").append(
                 formattedProjectTitle,
                 formattedProjectDates,
                 formattedProjectDescription
@@ -176,7 +176,7 @@ var projects = {
             project.images.forEach(function (imageUrl) {
                 var formattedProjectImage = HTMLprojectImage.
                     replace("%data%", imageUrl);
-                $("#projects").append(formattedProjectImage);
+                $(".project-entry:last").append(formattedProjectImage);
             });
 
         });
@@ -258,6 +258,30 @@ var education = {
         }
     ],
     "display": function () {
+        education.schools.forEach(function (school) {
+            var formattedSchoolName = HTMLschoolName.
+                replace("%data%", school.name);
+            var formattedSchoolDegree = HTMLschoolDegree.
+                replace("%data%", school.degree);
+            var formattedSchoolDates = HTMLschoolDates.
+                replace("%data%", school.dates);
+            var formattedSchoolLocation = HTMLschoolLocation.
+                replace("%data%", school.location);
+
+            $("#education").append(HTMLschoolStart);
+            $(".education-entry:last").append(
+                formattedSchoolName,
+                formattedSchoolDegree,
+                formattedSchoolDates,
+                formattedSchoolLocation
+            );
+
+            school.majors.forEach(function (major) {
+                var formattedSchoolMajor = HTMLschoolMajor.
+                    replace("%data%", major);
+                $(".education-entry:last").append(formattedSchoolMajor);
+            });
+        });
     }
 };
 
@@ -274,4 +298,7 @@ work.display();
 
 /* Projects */
 projects.display();
+
+/* Education */
+education.display();
 
