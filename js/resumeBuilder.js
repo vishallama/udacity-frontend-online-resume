@@ -142,8 +142,8 @@ var projects = {
             "description": "One-page responsive website for displaying an interactive " +
             "online resume. Written using HTML, CSS, JavaScript, and jQuery.",
             "images": [
-                "images/",
-                "images/"
+                "images/udacity-fullstack-movie-trailer-img02-600x300small.png",
+                "images/udacity-fullstack-movie-trailer-img03-600x300small.png"
             ]
         },
         {
