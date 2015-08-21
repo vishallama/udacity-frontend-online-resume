@@ -163,6 +163,13 @@ var work = {
     // Array of objects containing previous jobs info
     jobs: [
         {
+            employer: "Cedar City Yogurt LLC",
+            title: "Co-owner",
+            location: "Cedar City, UT",
+            dates: "2014 - 2015",
+            description: "Ran and managed a family-owned frozen yogurt store."
+        },
+        {
             employer: "Arabic and Indian Foods LLC",
             title: "Co-owner",
             location: "Cedar City, UT",
@@ -170,11 +177,14 @@ var work = {
             description: "Ran and managed a grocery store."
         },
         {
-            employer: "Cedar City Yogurt LLC",
-            title: "Co-owner",
+            employer: "Southern Utah University",
+            title: "Tutor, Grader and TA",
             location: "Cedar City, UT",
-            dates: "2014 - 2015",
-            description: "Ran and managed a family-owned frozen yogurt store."
+            dates: "2006- 2011",
+            description: "Tutored, graded HW and performed TA-related tasks " +
+            "for a variety of math and computer science courses, including " +
+            "calculus, probability and statistics, linear algebra, college " +
+            "algebra, introductory logic, and introductory java programming."
         }
     ],
     display: function(){
