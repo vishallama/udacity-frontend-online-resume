@@ -280,55 +280,56 @@ var education = {
             "date": 2015,
             "url": "https://www.udacity.com/course/configuring-linux-web-servers--ud299"
         }
-    ],
-    "display": function () {
-        education.schools.forEach(function (school) {
-            var formattedSchoolName = HTMLschoolName.
-                replace("#", school.url).
-                replace("%data%", school.name);
-            var formattedSchoolDegree = HTMLschoolDegree.
-                replace("%data%", school.degree);
-            var formattedSchoolDates = HTMLschoolDates.
-                replace("%data%", school.dates);
-            var formattedSchoolLocation = HTMLschoolLocation.
-                replace("%data%", school.location);
-
-            $("#education").append(HTMLschoolStart);
-            $(".education-entry:last").append(
-                formattedSchoolName +
-                formattedSchoolDegree +
-                formattedSchoolDates +
-                formattedSchoolLocation
-            );
-
-            school.majors.forEach(function (major) {
-                var formattedSchoolMajor = HTMLschoolMajor.
-                    replace("%data%", major);
-                $(".education-entry:last").append(formattedSchoolMajor);
-            });
-        });
-
-        $("#education").append(HTMLonlineClasses);
-        education.onlineCourses.forEach(function (onlineCourse) {
-            var formattedOnlineTitle = HTMLonlineTitle.
-                replace("%data%", onlineCourse.title);
-            var formattedOnlineSchool = HTMLonlineSchool.
-                replace("%data%", onlineCourse.school);
-            var formattedOnlineDates = HTMLonlineDates.
-                replace("%data%", onlineCourse.date);
-            var formattedOnlineUrl = HTMLonlineURL.
-                replace("%data%", onlineCourse.url);
-
-            $("#education").append(HTMLonlineClassStart);
-            $(".education-entry:last").append(
-                formattedOnlineTitle +
-                formattedOnlineSchool +
-                formattedOnlineDates +
-                formattedOnlineUrl
-            );
-        });
-    }
+    ]
 };
+
+education.display = function () {
+    education.schools.forEach(function (school) {
+        var formattedSchoolName = HTMLschoolName.
+            replace("#", school.url).
+            replace("%data%", school.name);
+        var formattedSchoolDegree = HTMLschoolDegree.
+            replace("%data%", school.degree);
+        var formattedSchoolDates = HTMLschoolDates.
+            replace("%data%", school.dates);
+        var formattedSchoolLocation = HTMLschoolLocation.
+            replace("%data%", school.location);
+
+        $("#education").append(HTMLschoolStart);
+        $(".education-entry:last").append(
+            formattedSchoolName +
+            formattedSchoolDegree +
+            formattedSchoolDates +
+            formattedSchoolLocation
+        );
+
+        school.majors.forEach(function (major) {
+            var formattedSchoolMajor = HTMLschoolMajor.
+                replace("%data%", major);
+            $(".education-entry:last").append(formattedSchoolMajor);
+        });
+    });
+
+    $("#education").append(HTMLonlineClasses);
+    education.onlineCourses.forEach(function (onlineCourse) {
+        var formattedOnlineTitle = HTMLonlineTitle.
+            replace("%data%", onlineCourse.title);
+        var formattedOnlineSchool = HTMLonlineSchool.
+            replace("%data%", onlineCourse.school);
+        var formattedOnlineDates = HTMLonlineDates.
+            replace("%data%", onlineCourse.date);
+        var formattedOnlineUrl = HTMLonlineURL.
+            replace("%data%", onlineCourse.url);
+
+        $("#education").append(HTMLonlineClassStart);
+        $(".education-entry:last").append(
+            formattedOnlineTitle +
+            formattedOnlineSchool +
+            formattedOnlineDates +
+            formattedOnlineUrl
+        );
+    });
+}
 
 
 /*
