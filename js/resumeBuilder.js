@@ -33,17 +33,26 @@ var bio = {
     ],
     "biopic": "images/vishal.png",
     "display": function() {
-        var formattedName = HTMLheaderName.replace("%data%", bio.name);
-        var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+        var formattedName = HTMLheaderName.
+            replace("%data%", bio.name);
+        var formattedRole = HTMLheaderRole.
+            replace("%data%", bio.role);
 
-        var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-        var formattedEmail= HTMLemail.replace("%data%", bio.contacts.email);
-        var formattedTwitter= HTMLtwitter.replace("%data%", bio.contacts.twitter);
-        var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-        var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+        var formattedMobile = HTMLmobile.
+            replace("%data%", bio.contacts.mobile);
+        var formattedEmail= HTMLemail.
+            replace("%data%", bio.contacts.email);
+        var formattedTwitter= HTMLtwitter.
+            replace("%data%", bio.contacts.twitter);
+        var formattedGithub = HTMLgithub.
+            replace("%data%", bio.contacts.github);
+        var formattedLocation = HTMLlocation.
+            replace("%data%", bio.contacts.location);
 
-        var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-        var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+        var formattedBioPic = HTMLbioPic.
+            replace("%data%", bio.biopic);
+        var formattedWelcomeMessage = HTMLwelcomeMsg.
+            replace("%data%", bio.welcomeMessage);
 
         var contactItems = [
             formattedMobile,
@@ -127,30 +136,35 @@ var work = {
 var projects = {
     "projects": [
         {
-            "title": "Udacity Front-End Web Developer Nanodegree - Portfolio Site",
+            "title": "Udacity Front-End Web Developer Nanodegree - Portfolio " +
+            "Site",
             "dates": "2015",
-            "description": "One-page fully-responsive website to display a portfolio of " +
-            "projects. Written using HTML, CSS, jQuery, and Bootstrap.",
+            "description": "One-page fully-responsive website to display a " +
+            "portfolio of projects. Written using HTML, CSS, jQuery, and " +
+            "Bootstrap.",
             "images": [
                 "images/udacity-frontend-portfolio-img01-300x150xs.png",
                 "images/udacity-frontend-portfolio-img02-300x150xs.png"
             ]
         },
         {
-            "title": "Udacity Front-End Web Developer Nanodegree - Online Resume",
+            "title": "Udacity Front-End Web Developer Nanodegree - Online " +
+            "Resume",
             "dates": "2015",
-            "description": "One-page responsive website for displaying an interactive " +
-            "online resume. Written using HTML, CSS, JavaScript, and jQuery.",
+            "description": "One-page responsive website for displaying an " +
+            "interactive online resume. Written using HTML, CSS, JavaScript, " +
+            "and jQuery.",
             "images": [
                 "images/udacity-fullstack-movie-trailer-img02-300x150xs.png",
                 "images/udacity-fullstack-movie-trailer-img03-300x150xs.png"
             ]
         },
         {
-            "title": "Udacity Full Stack Web Developer Nanodegree - Movie Trailer Website",
+            "title": "Udacity Full Stack Web Developer Nanodegree - Movie " +
+            "Trailer Website",
             "dates": "2015",
-            "description": "One-page responsive website for displaying movie trailers. " +
-            "Written using HTML, CSS, jQuery, and Bootstrap.",
+            "description": "One-page responsive website for displaying movie " +
+            "trailers. Written using HTML, CSS, jQuery, and Bootstrap.",
             "images": [
                 "images/udacity-fullstack-movie-trailer-img01-300x150xs.png",
                 "images/udacity-fullstack-movie-trailer-img04-300x150xs.png"
