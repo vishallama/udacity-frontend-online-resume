@@ -62,7 +62,9 @@ var bio = {
             formattedLocation
         ];
 
-        $("#header").prepend(formattedName, formattedRole);
+        $("#header").prepend(
+            formattedName +
+            formattedRole);
 
         $("#topContacts").prepend(contactItems);
         $("#footerContacts").prepend(contactItems);
