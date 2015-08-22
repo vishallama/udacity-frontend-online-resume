@@ -274,6 +274,7 @@ var education = {
     "display": function () {
         education.schools.forEach(function (school) {
             var formattedSchoolName = HTMLschoolName.
+                replace("#", school.url).
                 replace("%data%", school.name);
             var formattedSchoolDegree = HTMLschoolDegree.
                 replace("%data%", school.degree);
