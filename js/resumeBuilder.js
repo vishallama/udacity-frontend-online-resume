@@ -206,7 +206,7 @@ var education = {
             "degree": "BS",
             "majors": ["Math (Pure)"],
             "dates": 2011,
-            "url": ""
+            "url": "http://www.suu.edu"
         }
     ],
     "onlineCourses": [
