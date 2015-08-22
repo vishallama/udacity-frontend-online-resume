@@ -351,3 +351,5 @@ education.display();
 /* Append internationalizeButton to the main div */
 $("#main").append(internationalizeButton);
 
+/* Add a google map */
+$("#map-div").append(googleMap);
