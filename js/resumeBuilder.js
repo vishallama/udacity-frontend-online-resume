@@ -296,6 +296,26 @@ var education = {
                 $(".education-entry:last").append(formattedSchoolMajor);
             });
         });
+
+        $("#education").append(HTMLonlineClasses);
+        education.onlineCourses.forEach(function (onlineCourse) {
+            var formattedOnlineTitle = HTMLonlineTitle.
+                replace("%data%", onlineCourse.title);
+            var formattedOnlineSchool = HTMLonlineSchool.
+                replace("%data%", onlineCourse.school);
+            var formattedOnlineDates = HTMLonlineDates.
+                replace("%data%", onlineCourse.date);
+            var formattedOnlineUrl = HTMLonlineURL.
+                replace("%data%", onlineCourse.url);
+
+            $("#education").append(HTMLonlineClassStart);
+            $(".education-entry:last").append(
+                formattedOnlineTitle,
+                formattedOnlineSchool,
+                formattedOnlineDates,
+                formattedOnlineUrl
+            );
+        });
     }
 };
 
