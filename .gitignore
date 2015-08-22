@@ -2,10 +2,10 @@
 .project
 
 # Webstorm project folder
-.idea
+.idea/
 
 # Temporary image folder
-images_src
+images_src/
 
 # Gruntfile
 Gruntfile.js
@@ -17,8 +17,8 @@ package.json
 *.swp
 
 # Node modules
-node_modules
+node_modules/
 
 # Temporary folder for files
-temp
+temp/
 
