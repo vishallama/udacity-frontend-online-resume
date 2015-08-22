@@ -32,55 +32,57 @@ var bio = {
         "Linux"
     ],
     "biopic": "images/vishal.png",
-    "display": function() {
-        var formattedName = HTMLheaderName.
-            replace("%data%", bio.name);
-        var formattedRole = HTMLheaderRole.
-            replace("%data%", bio.role);
-
-        var formattedMobile = HTMLmobile.
-            replace("%data%", bio.contacts.mobile);
-        var formattedEmail= HTMLemail.
-            replace("%data%", bio.contacts.email);
-        var formattedTwitter= HTMLtwitter.
-            replace("%data%", bio.contacts.twitter);
-        var formattedGithub = HTMLgithub.
-            replace("%data%", bio.contacts.github);
-        var formattedLocation = HTMLlocation.
-            replace("%data%", bio.contacts.location);
-
-        var formattedBioPic = HTMLbioPic.
-            replace("%data%", bio.biopic);
-        var formattedWelcomeMessage = HTMLwelcomeMsg.
-            replace("%data%", bio.welcomeMessage);
-
-        var contactItems = [
-            formattedMobile,
-            formattedEmail,
-            formattedTwitter,
-            formattedGithub,
-            formattedLocation
-        ];
-
-        $("#header").prepend(
-            formattedName +
-            formattedRole);
-
-        $("#topContacts").prepend(contactItems);
-        $("#footerContacts").prepend(contactItems);
-
-        $("#header").append(
-            formattedBioPic +
-            formattedWelcomeMessage);
-
-        $("#header").append(HTMLskillsStart);
-
-        bio.skills.forEach(function (skill) {
-            var formattedSkill = HTMLskills.replace("%data%", skill);
-            $("#skills").append(formattedSkill);
-        });
-    }
 };
+
+bio.display = function() {
+    var formattedName = HTMLheaderName.
+        replace("%data%", bio.name);
+    var formattedRole = HTMLheaderRole.
+        replace("%data%", bio.role);
+
+    var formattedMobile = HTMLmobile.
+        replace("%data%", bio.contacts.mobile);
+    var formattedEmail= HTMLemail.
+        replace("%data%", bio.contacts.email);
+    var formattedTwitter= HTMLtwitter.
+        replace("%data%", bio.contacts.twitter);
+    var formattedGithub = HTMLgithub.
+        replace("%data%", bio.contacts.github);
+    var formattedLocation = HTMLlocation.
+        replace("%data%", bio.contacts.location);
+
+    var formattedBioPic = HTMLbioPic.
+        replace("%data%", bio.biopic);
+    var formattedWelcomeMessage = HTMLwelcomeMsg.
+        replace("%data%", bio.welcomeMessage);
+
+    var contactItems = [
+        formattedMobile,
+        formattedEmail,
+        formattedTwitter,
+        formattedGithub,
+        formattedLocation
+    ];
+
+    $("#header").prepend(
+        formattedName +
+        formattedRole);
+
+    $("#topContacts").prepend(contactItems);
+    $("#footerContacts").prepend(contactItems);
+
+    $("#header").append(
+        formattedBioPic +
+        formattedWelcomeMessage);
+
+    $("#header").append(HTMLskillsStart);
+
+    bio.skills.forEach(function (skill) {
+        var formattedSkill = HTMLskills.replace("%data%", skill);
+        $("#skills").append(formattedSkill);
+    });
+}
+
 
 /* JSON object containing work info */
 var work = {
