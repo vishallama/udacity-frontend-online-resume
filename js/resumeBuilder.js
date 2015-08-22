@@ -67,7 +67,9 @@ var bio = {
         $("#topContacts").prepend(contactItems);
         $("#footerContacts").prepend(contactItems);
 
-        $("#header").append(formattedBioPic, formattedWelcomeMessage);
+        $("#header").append(
+            formattedBioPic +
+            formattedWelcomeMessage);
 
         $("#header").append(HTMLskillsStart);
 
@@ -122,10 +124,10 @@ var work = {
             $("#workExperience").append(HTMLworkStart);
             $(".work-entry:last").
                 append(
-                formattedWorkEmployer,
-                formattedWorkTitle,
-                formattedWorkLocation,
-                formattedWorkDates,
+                formattedWorkEmployer +
+                formattedWorkTitle +
+                formattedWorkLocation +
+                formattedWorkDates +
                 formattedWorkDescription
             );
         });
@@ -182,8 +184,8 @@ var projects = {
 
             $("#projects").append(HTMLprojectStart);
             $(".project-entry:last").append(
-                formattedProjectTitle,
-                formattedProjectDates,
+                formattedProjectTitle +
+                formattedProjectDates +
                 formattedProjectDescription
             );
 
@@ -285,9 +287,9 @@ var education = {
 
             $("#education").append(HTMLschoolStart);
             $(".education-entry:last").append(
-                formattedSchoolName,
-                formattedSchoolDegree,
-                formattedSchoolDates,
+                formattedSchoolName +
+                formattedSchoolDegree +
+                formattedSchoolDates +
                 formattedSchoolLocation
             );
 
@@ -311,9 +313,9 @@ var education = {
 
             $("#education").append(HTMLonlineClassStart);
             $(".education-entry:last").append(
-                formattedOnlineTitle,
-                formattedOnlineSchool,
-                formattedOnlineDates,
+                formattedOnlineTitle +
+                formattedOnlineSchool +
+                formattedOnlineDates +
                 formattedOnlineUrl
             );
         });
