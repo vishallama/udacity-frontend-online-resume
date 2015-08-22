@@ -341,3 +341,6 @@ projects.display();
 /* Education */
 education.display();
 
+/* Append internationalizeButton to the main div */
+$("#main").append(internationalizeButton);
+
