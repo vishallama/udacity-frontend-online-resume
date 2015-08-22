@@ -31,7 +31,7 @@ var bio = {
         "Bootstrap",
         "Linux"
     ],
-    "biopic": "images/vishal.png",
+    "biopic": "images/vishal.png"
 };
 
 bio.display = function() {
@@ -111,32 +111,34 @@ var work = {
             "calculus, probability and statistics, linear algebra, college " +
             "algebra, introductory logic, and introductory java programming."
         }
-    ],
-    "display": function(){
-        work.jobs.forEach(function(workEntry) {
-            var formattedWorkEmployer = HTMLworkEmployer.
-                replace("%data%", workEntry.employer);
-            var formattedWorkTitle = HTMLworkTitle.
-                replace("%data%", workEntry.title);
-            var formattedWorkLocation = HTMLworkLocation.
-                replace("%data%", workEntry.location);
-            var formattedWorkDates = HTMLworkDates.
-                replace("%data%", workEntry.dates);
-            var formattedWorkDescription = HTMLworkDescription.
-                replace("%data%", workEntry.description);
-
-            $("#workExperience").append(HTMLworkStart);
-            $(".work-entry:last").
-                append(
-                formattedWorkEmployer +
-                formattedWorkTitle +
-                formattedWorkLocation +
-                formattedWorkDates +
-                formattedWorkDescription
-            );
-        });
-    }
+    ]
 };
+
+work.display =  function(){
+    work.jobs.forEach(function(workEntry) {
+        var formattedWorkEmployer = HTMLworkEmployer.
+            replace("%data%", workEntry.employer);
+        var formattedWorkTitle = HTMLworkTitle.
+            replace("%data%", workEntry.title);
+        var formattedWorkLocation = HTMLworkLocation.
+            replace("%data%", workEntry.location);
+        var formattedWorkDates = HTMLworkDates.
+            replace("%data%", workEntry.dates);
+        var formattedWorkDescription = HTMLworkDescription.
+            replace("%data%", workEntry.description);
+
+        $("#workExperience").append(HTMLworkStart);
+        $(".work-entry:last").
+            append(
+            formattedWorkEmployer +
+            formattedWorkTitle +
+            formattedWorkLocation +
+            formattedWorkDates +
+            formattedWorkDescription
+        );
+    });
+}
+
 
 /* JSON object containing info on projects */
 var projects = {
