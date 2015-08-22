@@ -178,32 +178,34 @@ var projects = {
                 "images/udacity-fullstack-movie-trailer-img04-300x150xs.png"
             ]
         }
-    ],
-    "display": function(){
-        projects.projects.forEach(function(project) {
-            var formattedProjectTitle = HTMLprojectTitle.
-                replace("%data%", project.title);
-            var formattedProjectDates = HTMLprojectDates.
-                replace("%data%", project.dates);
-            var formattedProjectDescription = HTMLprojectDescription.
-                replace("%data%", project.description);
-
-            $("#projects").append(HTMLprojectStart);
-            $(".project-entry:last").append(
-                formattedProjectTitle +
-                formattedProjectDates +
-                formattedProjectDescription
-            );
-
-            project.images.forEach(function (imageUrl) {
-                var formattedProjectImage = HTMLprojectImage.
-                    replace("%data%", imageUrl);
-                $(".project-entry:last").append(formattedProjectImage);
-            });
-
-        });
-    }
+    ]
 };
+
+projects.display = function(){
+    projects.projects.forEach(function(project) {
+        var formattedProjectTitle = HTMLprojectTitle.
+            replace("%data%", project.title);
+        var formattedProjectDates = HTMLprojectDates.
+            replace("%data%", project.dates);
+        var formattedProjectDescription = HTMLprojectDescription.
+            replace("%data%", project.description);
+
+        $("#projects").append(HTMLprojectStart);
+        $(".project-entry:last").append(
+            formattedProjectTitle +
+            formattedProjectDates +
+            formattedProjectDescription
+        );
+
+        project.images.forEach(function (imageUrl) {
+            var formattedProjectImage = HTMLprojectImage.
+                replace("%data%", imageUrl);
+            $(".project-entry:last").append(formattedProjectImage);
+        });
+
+    });
+}
+
 
 /* JSON object containing education info */
 var education = {
