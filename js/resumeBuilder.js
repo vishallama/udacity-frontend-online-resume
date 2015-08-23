@@ -313,20 +313,21 @@ education.display = function () {
     $("#education").append(HTMLonlineClasses);
     education.onlineCourses.forEach(function (onlineCourse) {
         var formattedOnlineTitle = HTMLonlineTitle.
-            replace("%data%", onlineCourse.title);
+            replace("%data%", onlineCourse.title).
+            replace("#", onlineCourse.url);
         var formattedOnlineSchool = HTMLonlineSchool.
             replace("%data%", onlineCourse.school);
         var formattedOnlineDates = HTMLonlineDates.
             replace("%data%", onlineCourse.date);
-        var formattedOnlineUrl = HTMLonlineURL.
-            replace("%data%", onlineCourse.url);
+        //var formattedOnlineUrl = HTMLonlineURL.
+        //    replace("%data%", onlineCourse.url);
 
         $("#education").append(HTMLonlineClassStart);
         $(".education-entry:last").append(
             formattedOnlineTitle +
             formattedOnlineSchool +
-            formattedOnlineDates +
-            formattedOnlineUrl
+            formattedOnlineDates
+            //formattedOnlineUrl
         );
     });
 };
