@@ -81,7 +81,7 @@ bio.display = function() {
         var formattedSkill = HTMLskills.replace("%data%", skill);
         $("#skills").append(formattedSkill);
     });
-}
+};
 
 
 /* JSON object containing work info */
@@ -137,7 +137,7 @@ work.display =  function(){
             formattedWorkDescription
         );
     });
-}
+};
 
 
 /* JSON object containing info on projects */
@@ -204,7 +204,7 @@ projects.display = function(){
         });
 
     });
-}
+};
 
 
 /* JSON object containing education info */
@@ -329,7 +329,7 @@ education.display = function () {
             formattedOnlineUrl
         );
     });
-}
+};
 
 
 /*
