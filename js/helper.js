@@ -71,7 +71,7 @@ hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
   $('button').click(function() {
-    var iName = inName() || function(){};
+    var iName = inName(bio.name) || function(){};
     $('#name').html(iName);  
   });
 });
@@ -85,7 +85,6 @@ function inName(name) {
     var lastName = names[1].toUpperCase();
 
     return firstName + " " + lastName;
-
 }
 
 /*
