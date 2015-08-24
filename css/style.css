@@ -197,13 +197,13 @@ span {
 #map {
   display: block;
   height: 100%;
-  margin: 0 5%;
+  margin: 0 5px;
 }
 
 #map-div {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding: 0 0 5px 0;
 }
 
 @media only screen and (min-width: 750px) {
