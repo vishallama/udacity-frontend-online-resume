@@ -64,18 +64,13 @@ bio.display = function() {
         formattedLocation
     ];
 
-    $("#header").prepend(
-        formattedName +
-        formattedRole);
+    $("#header").
+        prepend(formattedName + formattedRole).
+        append(formattedBioPic + formattedWelcomeMessage).
+        append(HTMLskillsStart);
 
     $("#topContacts").prepend(contactItems);
     $("#footerContacts").prepend(contactItems);
-
-    $("#header").append(
-        formattedBioPic +
-        formattedWelcomeMessage);
-
-    $("#header").append(HTMLskillsStart);
 
     bio.skills.forEach(function (skill) {
         var formattedSkill = HTMLskills.replace("%data%", skill);
@@ -106,8 +101,8 @@ var work = {
             "title": "Tutor, Grader and TA",
             "location": "Cedar City, UT",
             "dates": "2006- 2011",
-            "description": "Tutored, graded HW and performed TA-related tasks " +
-            "for a variety of math and computer science courses, including " +
+            "description": "Tutored, graded HW and performed TA-related tasks" +
+            " for a variety of math and computer science courses, including " +
             "calculus, probability and statistics, linear algebra, college " +
             "algebra, introductory logic, and introductory java programming."
         }
@@ -354,3 +349,4 @@ $("#main").append(internationalizeButton);
 
 /* Add a google map */
 $("#map-div").append(googleMap);
+
