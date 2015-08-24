@@ -10,126 +10,126 @@ correctly.
 
 /* JSON object containing biographical info */
 var bio = {
-    "name": "Vishal Lama",
-    "role": "Web Developer",
-    "contacts": {
-        "mobile": "123-456-7890",
-        "email": "contact@vishallama.org",
-        "github": "vishallama",
-        "twitter": "@vishallama",
-        "location": "Cedar City, UT"
-    },
-    "welcomeMessage": "Welcome!",
-    "skills": [
-        "Python",
-        "JavaScript",
-        "SML(NJ)",
-        "Scala",
-        "HTML/CSS",
-        "Bootstrap",
-        "Linux"
-    ],
-    "biopic": "images/vishal.png"
+  "name": "Vishal Lama",
+  "role": "Web Developer",
+  "contacts": {
+    "mobile": "123-456-7890",
+    "email": "contact@vishallama.org",
+    "github": "vishallama",
+    "twitter": "@vishallama",
+    "location": "Cedar City, UT"
+  },
+  "welcomeMessage": "Welcome!",
+  "skills": [
+    "Python",
+    "JavaScript",
+    "SML(NJ)",
+    "Scala",
+    "HTML/CSS",
+    "Bootstrap",
+    "Linux"
+  ],
+  "biopic": "images/vishal.png"
 };
 
 bio.display = function() {
-    var formattedName = HTMLheaderName.
-        replace("%data%", bio.name);
-    var formattedRole = HTMLheaderRole.
-        replace("%data%", bio.role);
+  var formattedName = HTMLheaderName.
+    replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.
+    replace("%data%", bio.role);
 
-    var formattedMobile = HTMLmobile.
-        replace("%data%", bio.contacts.mobile);
-    var formattedEmail= HTMLemail.
-        replace("%data%", bio.contacts.email);
-    var formattedTwitter= HTMLtwitter.
-        replace("%data%", bio.contacts.twitter);
-    var formattedGithub = HTMLgithub.
-        replace("%data%", bio.contacts.github);
-    var formattedLocation = HTMLlocation.
-        replace("%data%", bio.contacts.location);
+  var formattedMobile = HTMLmobile.
+    replace("%data%", bio.contacts.mobile);
+  var formattedEmail= HTMLemail.
+    replace("%data%", bio.contacts.email);
+  var formattedTwitter= HTMLtwitter.
+    replace("%data%", bio.contacts.twitter);
+  var formattedGithub = HTMLgithub.
+    replace("%data%", bio.contacts.github);
+  var formattedLocation = HTMLlocation.
+    replace("%data%", bio.contacts.location);
 
-    var formattedBioPic = HTMLbioPic.
-        replace("%data%", bio.biopic);
-    var formattedWelcomeMessage = HTMLwelcomeMsg.
-        replace("%data%", bio.welcomeMessage);
+  var formattedBioPic = HTMLbioPic.
+    replace("%data%", bio.biopic);
+  var formattedWelcomeMessage = HTMLwelcomeMsg.
+    replace("%data%", bio.welcomeMessage);
 
-    var contactItems = [
-        formattedMobile,
-        formattedEmail,
-        formattedTwitter,
-        formattedGithub,
-        formattedLocation
-    ];
+  var contactItems = [
+    formattedMobile,
+    formattedEmail,
+    formattedTwitter,
+    formattedGithub,
+    formattedLocation
+  ];
 
-    $("#header").
-        prepend(formattedName + formattedRole).
-        append(formattedBioPic + formattedWelcomeMessage).
-        append(HTMLskillsStart);
+  $("#header").
+    prepend(formattedName + formattedRole).
+    append(formattedBioPic + formattedWelcomeMessage).
+    append(HTMLskillsStart);
 
-    $("#topContacts").prepend(contactItems);
-    $("#footerContacts").prepend(contactItems);
+  $("#topContacts").prepend(contactItems);
+  $("#footerContacts").prepend(contactItems);
 
-    bio.skills.forEach(function (skill) {
-        var formattedSkill = HTMLskills.replace("%data%", skill);
-        $("#skills").append(formattedSkill);
-    });
+  bio.skills.forEach(function (skill) {
+    var formattedSkill = HTMLskills.replace("%data%", skill);
+    $("#skills").append(formattedSkill);
+  });
 };
 
 
 /* JSON object containing work info */
 var work = {
-    "jobs": [
-        {
-            "employer": "Cedar City Yogurt LLC",
-            "title": "Co-owner",
-            "location": "Cedar City, UT",
-            "dates": "2014 - 2015",
-            "description": "Ran and managed a family-owned frozen yogurt store."
-        },
-        {
-            "employer": "Arabic and Indian Foods LLC",
-            "title": "Co-owner",
-            "location": "Cedar City, UT",
-            "dates": "2012 - 2015",
-            "description": "Ran and managed a grocery store."
-        },
-        {
-            "employer": "Southern Utah University",
-            "title": "Tutor, Grader and TA",
-            "location": "Cedar City, UT",
-            "dates": "2006- 2011",
-            "description": "Tutored, graded HW and performed TA-related tasks" +
-            " for a variety of math and computer science courses, including " +
-            "calculus, probability and statistics, linear algebra, college " +
-            "algebra, introductory logic, and introductory java programming."
-        }
-    ]
+  "jobs": [
+    {
+      "employer": "Cedar City Yogurt LLC",
+      "title": "Co-owner",
+      "location": "Cedar City, UT",
+      "dates": "2014 - 2015",
+      "description": "Ran and managed a family-owned frozen yogurt store."
+    },
+    {
+      "employer": "Arabic and Indian Foods LLC",
+      "title": "Co-owner",
+      "location": "Cedar City, UT",
+      "dates": "2012 - 2015",
+      "description": "Ran and managed a grocery store."
+    },
+    {
+      "employer": "Southern Utah University",
+      "title": "Tutor, Grader and TA",
+      "location": "Cedar City, UT",
+      "dates": "2006- 2011",
+      "description": "Tutored, graded HW and performed TA-related tasks" +
+      " for a variety of math and computer science courses, including " +
+      "calculus, probability and statistics, linear algebra, college " +
+      "algebra, introductory logic, and introductory java programming."
+    }
+  ]
 };
 
 work.display =  function(){
-    work.jobs.forEach(function(workEntry) {
-        var formattedWorkEmployer = HTMLworkEmployer.
-            replace("%data%", workEntry.employer);
-        var formattedWorkTitle = HTMLworkTitle.
-            replace("%data%", workEntry.title);
-        var formattedWorkLocation = HTMLworkLocation.
-            replace("%data%", workEntry.location);
-        var formattedWorkDates = HTMLworkDates.
-            replace("%data%", workEntry.dates);
-        var formattedWorkDescription = HTMLworkDescription.
-            replace("%data%", workEntry.description);
+  work.jobs.forEach(function(workEntry) {
+    var formattedWorkEmployer = HTMLworkEmployer.
+      replace("%data%", workEntry.employer);
+    var formattedWorkTitle = HTMLworkTitle.
+      replace("%data%", workEntry.title);
+    var formattedWorkLocation = HTMLworkLocation.
+      replace("%data%", workEntry.location);
+    var formattedWorkDates = HTMLworkDates.
+      replace("%data%", workEntry.dates);
+    var formattedWorkDescription = HTMLworkDescription.
+      replace("%data%", workEntry.description);
 
-        $("#workExperience").append(HTMLworkStart);
-        $(".work-entry:last").
-            append(
-            formattedWorkEmployer +
-            formattedWorkTitle +
-            formattedWorkLocation +
-            formattedWorkDates +
-            formattedWorkDescription
-        );
-    });
+    $("#workExperience").append(HTMLworkStart);
+    $(".work-entry:last").
+      append(
+      formattedWorkEmployer +
+      formattedWorkTitle +
+      formattedWorkLocation +
+      formattedWorkDates +
+      formattedWorkDescription
+    );
+  });
 };
 
 
