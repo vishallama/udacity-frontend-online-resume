@@ -1,12 +1,10 @@
 /*
-
 This file contains all of the code needed to create four JSONs corresponding
 to four distinct sections in index.html: work, education, projects and a
 header with biographical information.
 
 In addition, this file also uses code from helper.js to render index.html
 correctly.
-
  */
 
 
@@ -137,194 +135,187 @@ work.display =  function(){
 
 /* JSON object containing info on projects */
 var projects = {
-    "projects": [
-        {
-            "title": "Udacity Front-End Web Developer Nanodegree - Portfolio " +
-            "Site",
-            "dates": "2015",
-            "description": "One-page fully-responsive website to display a " +
-            "portfolio of projects. Written using HTML, CSS, jQuery, and " +
-            "Bootstrap.",
-            "images": [
-                "images/udacity-frontend-portfolio-img01-300x150xs.png",
-                "images/udacity-frontend-portfolio-img02-300x150xs.png"
-            ]
-        },
-        {
-            "title": "Udacity Front-End Web Developer Nanodegree - Online " +
-            "Resume",
-            "dates": "2015",
-            "description": "One-page responsive website for displaying an " +
-            "interactive online resume. Written using HTML, CSS, JavaScript, " +
-            "and jQuery.",
-            "images": [
-                "images/udacity-fullstack-movie-trailer-img02-300x150xs.png",
-                "images/udacity-fullstack-movie-trailer-img03-300x150xs.png"
-            ]
-        },
-        {
-            "title": "Udacity Full Stack Web Developer Nanodegree - Movie " +
-            "Trailer Website",
-            "dates": "2015",
-            "description": "One-page responsive website for displaying movie " +
-            "trailers. Written using HTML, CSS, jQuery, and Bootstrap.",
-            "images": [
-                "images/udacity-fullstack-movie-trailer-img01-300x150xs.png",
-                "images/udacity-fullstack-movie-trailer-img04-300x150xs.png"
-            ]
-        }
-    ]
+  "projects": [
+    {
+      "title": "Udacity Front-End Web Developer Nanodegree - Portfolio Site",
+      "dates": "2015",
+      "description": "One-page fully-responsive website to display a " +
+      "portfolio of projects. Written using HTML, CSS, jQuery, and Bootstrap.",
+      "images": [
+        "images/udacity-frontend-portfolio-img01-300x150xs.png",
+        "images/udacity-frontend-portfolio-img02-300x150xs.png"
+      ]
+    },
+    {
+      "title": "Udacity Front-End Web Developer Nanodegree - Online Resume",
+      "dates": "2015",
+      "description": "One-page responsive website for displaying an " +
+      "interactive online resume. Written using HTML, CSS, JavaScript, and " +
+      "jQuery.",
+      "images": [
+        "images/udacity-fullstack-movie-trailer-img02-300x150xs.png",
+        "images/udacity-fullstack-movie-trailer-img03-300x150xs.png"
+      ]
+    },
+    {
+      "title": "Udacity Full Stack Web Developer Nanodegree - Movie Trailer " +
+      "Website",
+      "dates": "2015",
+      "description": "One-page responsive website for displaying movie " +
+      "trailers. Written using HTML, CSS, jQuery, and Bootstrap.",
+      "images": [
+        "images/udacity-fullstack-movie-trailer-img01-300x150xs.png",
+        "images/udacity-fullstack-movie-trailer-img04-300x150xs.png"
+      ]
+    }
+  ]
 };
 
 projects.display = function(){
-    projects.projects.forEach(function(project) {
-        var formattedProjectTitle = HTMLprojectTitle.
-            replace("%data%", project.title);
-        var formattedProjectDates = HTMLprojectDates.
-            replace("%data%", project.dates);
-        var formattedProjectDescription = HTMLprojectDescription.
-            replace("%data%", project.description);
+  projects.projects.forEach(function(project) {
+    var formattedProjectTitle = HTMLprojectTitle.
+      replace("%data%", project.title);
+    var formattedProjectDates = HTMLprojectDates.
+      replace("%data%", project.dates);
+    var formattedProjectDescription = HTMLprojectDescription.
+      replace("%data%", project.description);
 
-        $("#projects").append(HTMLprojectStart);
-        $(".project-entry:last").append(
-            formattedProjectTitle +
-            formattedProjectDates +
-            formattedProjectDescription
-        );
+    $("#projects").append(HTMLprojectStart);
+    $(".project-entry:last").append(
+      formattedProjectTitle +
+      formattedProjectDates +
+      formattedProjectDescription
+    );
 
-        project.images.forEach(function (imageUrl) {
-            var formattedProjectImage = HTMLprojectImage.
-                replace("%data%", imageUrl);
-            $(".project-entry:last").append(formattedProjectImage);
-        });
-
+    project.images.forEach(function (imageUrl) {
+      var formattedProjectImage = HTMLprojectImage.
+        replace("%data%", imageUrl);
+      $(".project-entry:last").append(formattedProjectImage);
     });
+  });
 };
 
 
 /* JSON object containing education info */
 var education = {
-    "schools": [
-        {
-            "name": "Southern Utah University",
-            "location": "Cedar City, UT",
-            "degree": "BS",
-            "majors": ["Math (Pure)"],
-            "dates": 2011,
-            "url": "http://www.suu.edu"
-        }
-    ],
-    "onlineCourses": [
-        {
-            "title": "Intro to HTML and CSS",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
-        },
-        {
-            "title": "Responsive Web Design Fundamentals",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
-        },
-        {
-            "title": "Responsive Images",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/responsive-images--ud882"
-        },
-        {
-            "title": "JavaScript Basics",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/javascript-basics--ud804"
-        },
-        {
-            "title": "Linux Command Line Basics",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/linux-command-line-basics--ud595"
-        },
-        {
-            "title": "How to Use Git and GitHub",
-            "school": "Udacity",
-            "date": 2015,
-            "url":"https://www.udacity.com/course/how-to-use-git-and-github--ud775"
-        },
-        {
-            "title": "Programming Foundations with Python",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/programming-foundations-with-python--ud036"
-        },
-        {
-            "title": "Intro to Relational Databases",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/intro-to-relational-databases--ud197"
-        },
-        {
-            "title": "Intro to DevOps",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/intro-to-devops--ud611"
-        },
-        {
-            "title": "Configuring Linux Web Servers",
-            "school": "Udacity",
-            "date": 2015,
-            "url": "https://www.udacity.com/course/configuring-linux-web-servers--ud299"
-        }
-    ]
+  "schools": [
+    {
+      "name": "Southern Utah University",
+      "location": "Cedar City, UT",
+      "degree": "BS",
+      "majors": ["Math (Pure)"],
+      "dates": 2011,
+      "url": "http://www.suu.edu"
+      }
+  ],
+  "onlineCourses": [
+    {
+      "title": "Intro to HTML and CSS",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/intro-to-html-and-css--ud304"
+    },
+    {
+      "title": "Responsive Web Design Fundamentals",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+    },
+    {
+      "title": "Responsive Images",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/responsive-images--ud882"
+    },
+    {
+      "title": "JavaScript Basics",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/javascript-basics--ud804"
+    },
+    {
+      "title": "Linux Command Line Basics",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/linux-command-line-basics--ud595"
+    },
+    {
+      "title": "How to Use Git and GitHub",
+      "school": "Udacity",
+      "date": 2015,
+      "url":"https://www.udacity.com/course/how-to-use-git-and-github--ud775"
+    },
+    {
+      "title": "Programming Foundations with Python",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/programming-foundations-with-python--ud036"
+    },
+    {
+      "title": "Intro to Relational Databases",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/intro-to-relational-databases--ud197"
+    },
+    {
+      "title": "Intro to DevOps",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/intro-to-devops--ud611"
+    },
+    {
+      "title": "Configuring Linux Web Servers",
+      "school": "Udacity",
+      "date": 2015,
+      "url": "https://www.udacity.com/course/configuring-linux-web-servers--ud299"
+    }
+  ]
 };
 
 education.display = function () {
-    education.schools.forEach(function (school) {
-        var formattedSchoolName = HTMLschoolName.
-            replace("#", school.url).
-            replace("%data%", school.name);
-        var formattedSchoolDegree = HTMLschoolDegree.
-            replace("%data%", school.degree);
-        var formattedSchoolDates = HTMLschoolDates.
-            replace("%data%", school.dates);
-        var formattedSchoolLocation = HTMLschoolLocation.
-            replace("%data%", school.location);
+  education.schools.forEach(function (school) {
+    var formattedSchoolName = HTMLschoolName.
+        replace("#", school.url).
+        replace("%data%", school.name);
+    var formattedSchoolDegree = HTMLschoolDegree.
+        replace("%data%", school.degree);
+    var formattedSchoolDates = HTMLschoolDates.
+        replace("%data%", school.dates);
+    var formattedSchoolLocation = HTMLschoolLocation.
+        replace("%data%", school.location);
 
-        $("#education").append(HTMLschoolStart);
-        $(".education-entry:last").append(
-            formattedSchoolName +
-            formattedSchoolDegree +
-            formattedSchoolDates +
-            formattedSchoolLocation
-        );
+    $("#education").append(HTMLschoolStart);
+    $(".education-entry:last").append(
+        formattedSchoolName +
+        formattedSchoolDegree +
+        formattedSchoolDates +
+        formattedSchoolLocation
+    );
 
-        school.majors.forEach(function (major) {
-            var formattedSchoolMajor = HTMLschoolMajor.
-                replace("%data%", major);
-            $(".education-entry:last").append(formattedSchoolMajor);
-        });
+    school.majors.forEach(function (major) {
+      var formattedSchoolMajor = HTMLschoolMajor.
+        replace("%data%", major);
+      $(".education-entry:last").append(formattedSchoolMajor);
     });
+  });
 
-    $("#education").append(HTMLonlineClasses);
-    education.onlineCourses.forEach(function (onlineCourse) {
-        var formattedOnlineTitle = HTMLonlineTitle.
-            replace("%data%", onlineCourse.title).
-            replace("#", onlineCourse.url);
-        var formattedOnlineSchool = HTMLonlineSchool.
-            replace("%data%", onlineCourse.school);
-        var formattedOnlineDates = HTMLonlineDates.
-            replace("%data%", onlineCourse.date);
-        //var formattedOnlineUrl = HTMLonlineURL.
-        //    replace("%data%", onlineCourse.url);
+  $("#education").append(HTMLonlineClasses);
+  education.onlineCourses.forEach(function (onlineCourse) {
+    var formattedOnlineTitle = HTMLonlineTitle.
+      replace("%data%", onlineCourse.title).
+      replace("#", onlineCourse.url);
+    var formattedOnlineSchool = HTMLonlineSchool.
+      replace("%data%", onlineCourse.school);
+    var formattedOnlineDates = HTMLonlineDates.
+      replace("%data%", onlineCourse.date);
 
-        $("#education").append(HTMLonlineClassStart);
-        $(".education-entry:last").append(
-            formattedOnlineTitle +
-            formattedOnlineSchool +
-            formattedOnlineDates
-            //formattedOnlineUrl
-        );
-    });
+    $("#education").append(HTMLonlineClassStart);
+    $(".education-entry:last").append(
+      formattedOnlineTitle +
+      formattedOnlineSchool +
+      formattedOnlineDates
+    );
+  });
 };
 
 
