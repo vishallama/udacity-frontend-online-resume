@@ -291,21 +291,21 @@ var education = {
 education.display = function () {
   education.schools.forEach(function (school) {
     var formattedSchoolName = HTMLschoolName.
-        replace('#', school.url).
-        replace('%data%', school.name);
+      replace('#', school.url).
+      replace('%data%', school.name);
     var formattedSchoolDegree = HTMLschoolDegree.
-        replace('%data%', school.degree);
+      replace('%data%', school.degree);
     var formattedSchoolDates = HTMLschoolDates.
-        replace('%data%', school.dates);
+      replace('%data%', school.dates);
     var formattedSchoolLocation = HTMLschoolLocation.
-        replace('%data%', school.location);
+      replace('%data%', school.location);
 
     $('#education').append(HTMLschoolStart);
     $('.education-entry:last').append(
-        formattedSchoolName +
-        formattedSchoolDegree +
-        formattedSchoolDates +
-        formattedSchoolLocation
+      formattedSchoolName +
+      formattedSchoolDegree +
+      formattedSchoolDates +
+      formattedSchoolLocation
     );
 
     school.majors.forEach(function (major) {
