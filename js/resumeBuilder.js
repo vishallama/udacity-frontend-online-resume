@@ -235,7 +235,8 @@ var education = {
       'title': 'Responsive Web Design Fundamentals',
       'school': 'Udacity',
       'date': 2015,
-      'url': 'https://www.udacity.com/course/responsive-web-design-fundamentals--ud893'
+      'url': 'https://www.udacity.com/course/responsive-web-design-' +
+      'fundamentals--ud893'
     },
     {
       'title': 'Responsive Images',
@@ -265,13 +266,15 @@ var education = {
       'title': 'Programming Foundations with Python',
       'school': 'Udacity',
       'date': 2015,
-      'url': 'https://www.udacity.com/course/programming-foundations-with-python--ud036'
+      'url': 'https://www.udacity.com/course/programming-foundations-with-' +
+      'python--ud036'
     },
     {
       'title': 'Intro to Relational Databases',
       'school': 'Udacity',
       'date': 2015,
-      'url': 'https://www.udacity.com/course/intro-to-relational-databases--ud197'
+      'url': 'https://www.udacity.com/course/intro-to-relational-databases' +
+      '--ud197'
     },
     {
       'title': 'Intro to DevOps',
@@ -283,7 +286,8 @@ var education = {
       'title': 'Configuring Linux Web Servers',
       'school': 'Udacity',
       'date': 2015,
-      'url': 'https://www.udacity.com/course/configuring-linux-web-servers--ud299'
+      'url': 'https://www.udacity.com/course/configuring-linux-web-servers' +
+      '--ud299'
     }
   ]
 };
