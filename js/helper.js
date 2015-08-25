@@ -3,7 +3,7 @@ These are the HTML string templates used by resumeBuilder.js to generate the
 appropriate HTML tags after some formatting.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr/>';
+var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
 
 var HTMLmobile =
   '<li class="flex-item">' +
