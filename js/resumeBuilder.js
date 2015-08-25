@@ -199,6 +199,13 @@ projects.display = function(){
 /* JSON object containing education info */
 var education = {
   'schools': [
+    { 'name': 'Some Cool University',
+      'location': 'San Francisco, CA',
+      'degree': 'MS',
+      'majors': ['Computer Science'],
+      'dates': '2011-2013',
+      'url': 'http://www.stanford.edu'
+    },
     {
       'name': 'Southern Utah University',
       'location': 'Cedar City, UT',
