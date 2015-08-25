@@ -81,24 +81,24 @@ bio.display = function() {
 var work = {
   'jobs': [
     {
-      'employer': 'Cedar City Yogurt LLC',
+      'employer': 'New York Delicious Frozen Yogurt',
       'title': 'Co-owner',
-      'location': 'Cedar City, UT',
-      'dates': '2014 - 2015',
+      'location': 'New York City, NY',
+      'dates': '2013 - 2014',
       'description': 'Ran and managed a family-owned frozen yogurt store.'
     },
     {
       'employer': 'Arabic and Indian Foods LLC',
       'title': 'Co-owner',
-      'location': 'Cedar City, UT',
-      'dates': '2012 - 2015',
-      'description': 'Ran and managed a grocery store.'
+      'location': 'Phoenix, AZ',
+      'dates': '2014 - 2015',
+      'description': 'Ran and managed a spice store.'
     },
     {
       'employer': 'Southern Utah University',
       'title': 'Tutor, Grader and TA',
       'location': 'Cedar City, UT',
-      'dates': '2006- 2011',
+      'dates': '2006 - 2011',
       'description': 'Tutored, graded HW and performed TA-related tasks' +
       ' for a variety of math and computer science courses, including ' +
       'calculus, probability and statistics, linear algebra, college ' +
