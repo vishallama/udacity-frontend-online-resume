@@ -92,7 +92,7 @@ p {
 
 a {
   color: #19c;
-  text-decoration: none;
+  text-decoration: none !important;
   margin-top: 10px;
   display: block;
 }
