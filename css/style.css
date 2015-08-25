@@ -122,9 +122,12 @@ a {
   color: #fff;
 }
 
+.dark-gray-text {
+  color: #444;
+}
+
 .gray {
   background-color: #fff;
-  padding-bottom: 10px;
   clear:both;
 }
 
