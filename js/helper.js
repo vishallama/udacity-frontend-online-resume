@@ -63,11 +63,11 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<br><h3>Online Classes</h3>';
-var HTMLonlineClassStart = '<br><div class="education-entry"></div>';
+var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClassStart = '<div class="education-entry"></div>';
 var HTMLonlineTitle = '<a href="#" target="_blank">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineDates = '<div class="date-text">%data%</div><br>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
