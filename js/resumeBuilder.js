@@ -81,6 +81,13 @@ bio.display = function() {
 var work = {
   'jobs': [
     {
+      'employer': 'Arabic and Indian Foods LLC',
+      'title': 'Co-owner',
+      'location': 'Phoenix, AZ',
+      'dates': '2014 - 2015',
+      'description': 'Ran and managed a spice store.'
+    },
+    {
       'employer': 'New York Delicious Frozen Yogurt',
       'title': 'Co-owner',
       'location': 'New York City, NY',
@@ -88,11 +95,13 @@ var work = {
       'description': 'Ran and managed a family-owned frozen yogurt store.'
     },
     {
-      'employer': 'Arabic and Indian Foods LLC',
-      'title': 'Co-owner',
-      'location': 'Phoenix, AZ',
-      'dates': '2014 - 2015',
-      'description': 'Ran and managed a spice store.'
+      'employer': 'Some Cool University',
+      'title': 'TA',
+      'location': 'San Francisco',
+      'dates': '2011 - 2013',
+      'description': 'Teaching assistant in undergrad math and computer ' +
+      'science courses, including graph theory, type theory, functional ' +
+      'programming, and logic.'
     },
     {
       'employer': 'Southern Utah University',
