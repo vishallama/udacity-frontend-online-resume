@@ -121,8 +121,7 @@ $(document).click(function(loc) {
 
 /*
 This is the fun part. Here's where we generate the custom Google Map
-for the website.
-See the documentation below for more details.
+for the website. See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
 var map;    // declares a global map variable
@@ -137,7 +136,8 @@ function initializeMap() {
   var mapOptions = {
     disableDefaultUI: true,
     zoom: 8,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false
   };
 
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
