@@ -137,7 +137,6 @@ function initializeMap() {
     disableDefaultUI: true,
     zoom: 8,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false
   };
 
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
@@ -204,7 +203,7 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function () {
-      // your code goes here!
+      infoWindow.open(map);
     });
 
     // this is where the pin actually gets added to the map.
