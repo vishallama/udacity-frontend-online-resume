@@ -7,6 +7,26 @@ In addition, this file also uses code from helper.js to render index.html
 correctly.
  */
 
+function displayNavigation() {
+  var menuAnchors = [
+    {'anchor': 'workExperience', 'name': 'Work'},
+    {'anchor': 'projects', 'name': 'Projects'},
+    {'anchor': 'education', 'name': 'Education'},
+    {'anchor': 'map-div', 'name': 'Map'}
+  ];
+
+  $('.menu').
+    prepend(HTMLsiteName).
+    append(HTMLmenuItems);
+
+  menuAnchors.forEach(function (item) {
+    var formattedMenuItem = HTMLmenuItem.
+      replace('#', '#' + item.anchor).
+      replace('%data%', item.name);
+
+    $('.menu-items').append(formattedMenuItem);
+  });
+}
 
 /* JSON object containing biographical info */
 var bio = {
@@ -342,6 +362,8 @@ education.display = function () {
 /*
 Execute display() from each object to render index.html correctly
  */
+
+displayNavigation();
 
 /* Bio */
 bio.display();

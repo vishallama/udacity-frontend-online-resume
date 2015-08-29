@@ -5,6 +5,10 @@ appropriate HTML tags after some formatting.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
 
+var HTMLsiteName = '<a class="sitename" href="#">Home</a>';
+var HTMLmenuItems = '<ul class="menu-items"></ul>';
+var HTMLmenuItem = '<li><a href="#">%data%</a></li>';
+
 var HTMLmobile =
   '<li class="flex-item">' +
   '<span class="orange-text">mobile</span>' +
