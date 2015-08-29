@@ -130,6 +130,8 @@ https://developers.google.com/maps/documentation/javascript/reference
 */
 var map;    // declares a global map variable
 
+var globalInfoWindow;   // declares a global info window
+
 /*
 Start here! initializeMap() is called when page is loaded.
 */
@@ -207,7 +209,11 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function () {
-      infoWindow.open(map, this);
+      if (globalInfoWindow) {
+        globalInfoWindow.close();
+      }
+      globalInfoWindow = infoWindow;
+      globalInfoWindow.open(map, this);
     });
 
     // this is where the pin actually gets added to the map.
