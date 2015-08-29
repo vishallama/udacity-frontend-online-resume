@@ -198,7 +198,8 @@ function initializeMap() {
     // or hover over a pin on a map. They usually contain more information
     // about a location.
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+      content: name,
+      position: marker.getPosition()
     });
 
     // hmmmm, I wonder what this is about...
