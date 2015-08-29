@@ -5,7 +5,7 @@
   right: 0;
   z-index: 9999;
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: #357;
 }
 
@@ -19,8 +19,8 @@
 /* Example responsive navigation menu  */
 .fixed-nav-bar li,
 .fixed-nav-bar a {
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
 }
 .menu {
   width: 90%;
@@ -29,11 +29,11 @@
 }
 .menu a,
 .menu a:visited {
-  color: #ffffff;
+  color: #fff;
 }
 .menu a:hover,
 .menu a:target {
-  color: #ebebeb;
+  color: #eee;
 }
 .menu-items {
   display: inline-block;
@@ -45,7 +45,7 @@
 }
 a.sitename,
 a:visited.sitename {
-  color: #e0e0e0;
+  color: #eee;
 }
 .menu-items li {
   display: inline-block;
@@ -53,14 +53,14 @@ a:visited.sitename {
   margin-left: 10px;
 }
 .menu-items a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .show,
 .hide {
   display: none;
   padding-left: 15px;
   background: transparent no-repeat center left;
-  color: #dde1e2;
+  color: #dee;
 }
 .show {
   background-image: url('../assets/down-arrow-icon.png');
@@ -69,7 +69,7 @@ a:visited.sitename {
   background-image: url('../assets/up-arrow-icon.png');
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 750px) {
   .menu { 
     position: relative;
     width: 100%;
@@ -102,8 +102,7 @@ a:visited.sitename {
   .hide {
     display: none;
   }
-  #menu:target,
-  .show {
+  #menu:target .show {
     display: none;
   }
   #menu:target .hide,
