@@ -213,7 +213,7 @@ function initializeMap() {
         globalInfoWindow.close();
       }
       globalInfoWindow = infoWindow;
-      globalInfoWindow.open(map, this);
+      globalInfoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
