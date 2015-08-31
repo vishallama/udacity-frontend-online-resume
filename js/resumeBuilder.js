@@ -7,7 +7,9 @@ In addition, this file also uses code from helper.js to render index.html
 correctly.
  */
 
+/* function to display the top navigation bar */
 function displayNavigation() {
+  // html anchors and their values used in the top navigation bar
   var menuAnchors = [
     {'anchor': 'workExperience', 'name': 'Work'},
     {'anchor': 'projects', 'name': 'Projects'},
@@ -15,10 +17,12 @@ function displayNavigation() {
     {'anchor': 'map-div', 'name': 'Map'}
   ];
 
+  // add html tags for site name and menu list
   $('.menu').
     prepend(HTMLsiteName).
     append(HTMLmenuItems);
 
+  // for each anchor, add them to the menu list after formatting
   menuAnchors.forEach(function (item) {
     var formattedMenuItem = HTMLmenuItem.
       replace('#', '#' + item.anchor).
@@ -52,6 +56,7 @@ var bio = {
   'biopic': 'images/vishal.png'
 };
 
+// function to display all bio related data after formatting
 bio.display = function() {
   var formattedName = HTMLheaderName.
     replace('%data%', bio.name);
@@ -136,6 +141,7 @@ var work = {
   ]
 };
 
+// function to display all work related data after formatting
 work.display =  function(){
   work.jobs.forEach(function(workEntry) {
     var formattedWorkEmployer = HTMLworkEmployer.
@@ -200,6 +206,7 @@ var projects = {
   ]
 };
 
+// function to display all projects related data after formatting
 projects.display = function(){
   projects.projects.forEach(function(project) {
     var formattedProjectTitle = HTMLprojectTitle.
@@ -312,6 +319,7 @@ var education = {
   ]
 };
 
+// function to display all education related data after formatting
 education.display = function () {
   education.schools.forEach(function (school) {
     var formattedSchoolName = HTMLschoolName.
@@ -359,11 +367,10 @@ education.display = function () {
 };
 
 
-/*
-Execute display() from each object to render index.html correctly
- */
-
+// display top navigation bar
 displayNavigation();
+
+/* Execute display() from each object to render index.html correctly */
 
 /* Bio */
 bio.display();
