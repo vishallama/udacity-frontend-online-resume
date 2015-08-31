@@ -7,8 +7,10 @@
   <!-- Tells the browser what the title of this page should be. -->
   <title>Vishal Lama | Online Resume</title>
 
+  <!-- Load styles for fixed navigation bar -->
   <link href="css/fixed-navigation-bar.css" rel="stylesheet">
-  <!-- Load the page styles -->
+
+  <!-- Load custom page styles -->
   <link href="css/style.css" rel="stylesheet">
 
   <!-- Load Google Font 'Vollkorn' -->
@@ -31,7 +33,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="fixed-nav-bar">
+  <nav role="navigation" class="fixed-nav-bar">
     <div id="menu" class="menu">
       <!-- Responsive Navigation Menu -->
       <a class="show" href="#menu">Menu</a>
@@ -68,6 +70,7 @@
   -->
   <script src="js/resumeBuilder.js"></script>
 
+  <!-- If each section is empty, don't display it just yet -->
   <script type="text/javascript">
 
     if(document.getElementsByClassName('flex-item').length === 0) {
