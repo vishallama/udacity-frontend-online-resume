@@ -5,11 +5,13 @@ html {
 }
 
 body {
+  /* add extra margin to top to align with the top navigation bar */
   padding: 40px 0 0 0;
   margin: 0;
   font-family: 'Vollkorn', serif !important;
 }
 
+/* default values for these elements */
 div,
 ul,
 li,
