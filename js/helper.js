@@ -42,7 +42,7 @@ var HTMLlocation =
   '<span class="white-text">%data%</span>' +
   '</li>';
 
-var HTMLbioPic = '<img src="%data%" class="biopic" width="150" height="200">';
+var HTMLbioPic = '<img src="%data%" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart =

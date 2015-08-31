@@ -53,7 +53,7 @@ var bio = {
     'Bootstrap',
     'Linux'
   ],
-  'biopic': 'images/vishal.png'
+  'biopic': 'images/vishal.jpg'
 };
 
 // function to display all bio related data after formatting
