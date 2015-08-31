@@ -1,6 +1,12 @@
 /*
-These are the HTML string templates used by resumeBuilder.js to generate the
-appropriate HTML tags after some formatting.
+This file contains the HTML string templates used by resumeBuilder.js to
+generate the appropriate HTML tags for index.html.
+The file also contains all the code for generating a google map for
+interactivity. The data for the google map is contained in resumeBuilder.js.
+ */
+
+/*
+HTML string templates
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span class="white-text">%data%</span><hr/>';
@@ -142,7 +148,7 @@ function initializeMap() {
   var mapOptions = {
     disableDefaultUI: true,
     zoom: 8,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
@@ -207,12 +213,16 @@ function initializeMap() {
       content: name,
     });
 
-    // hmmmm, I wonder what this is about...
+    // if a map marker is clicked, use the global info window to display some
+    // info
     google.maps.event.addListener(marker, 'click', function () {
+      // if there is an existing global info window, first close it
       if (globalInfoWindow) {
         globalInfoWindow.close();
       }
+      // set global info window to the new info window with updated content
       globalInfoWindow = infoWindow;
+      // open the global info window
       globalInfoWindow.open(map, marker);
     });
 
